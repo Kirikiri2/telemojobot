@@ -7,3 +7,6 @@ def main(message):
     bot.send_message(message.chat.id, f"Hello, {message.from_user.first_name} {message.from_user.last_name}")
 
 bot.infinity_polling()
+
+
+
