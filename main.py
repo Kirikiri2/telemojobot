@@ -11,12 +11,3 @@ bot.infinity_polling()
 
 
 
-
-
-
-
-
-
-
-
-
