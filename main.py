@@ -26,7 +26,7 @@ def response(function_call):
         bot.answer_callback_query(function_call.id)
 @bot.message_handler()
 def id(message):
-    if message.text.lower() == '001.111.111':
+    if message.text.lower() == '/mojo 001.111.111' or message.text.lower() == '/mojo 005.111.111':
         url = "https://pay-test.raif.ru/api/sbp/v1/qr/AD3D919E91494C53A41C5EFEB837846B/payment-info"
 
         # Заголовок с токеном авторизации
@@ -47,8 +47,8 @@ def id(message):
                 bot.send_message(message.chat.id,"Заказ не оплачен.\nПовторите запрос для обновления статуса")
         else:
            bot.send_message(message.chat.id,"Ошибка при выполнении запроса:", response.status_code)
-    elif message.text.lower() == '123.578.000':
-        url = "https://pay-test.raif.ru/api/sbp/v1/qr/AD7AE6A28D04438FAA9727E2644EB037/payment-info"
+    elif message.text.lower() == '/mojo 044.111.111' or message.text.lower() == '/mojo 009.111.111':
+        url = "https://pay-test.raif.ru/api/sbp/v1/qr/AD48EF32CC3049818875BF813A270CB1/payment-info"
 
         headers = {
             "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNQTYyMjk3NiIsImp0aSI6ImI1OTNkODRkLTk1MWYtNGIyZi05ZGViLTcxOWExNDM4NWVmZCJ9.si-87k3Aw5GN67orgJpoyTXC0C2OpWwRCKzLogRWawU"
