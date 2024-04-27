@@ -20,7 +20,7 @@ def main(message):
 def response(function_call):
   if function_call.message:
      if function_call.data == "yes":
-        agreement = "Введите номер заказа"
+        agreement = "Введите номер заказа 000.000.000"
         markup = types.InlineKeyboardMarkup()
         bot.send_message(function_call.message.chat.id, agreement, reply_markup=markup)
         bot.answer_callback_query(function_call.id)
@@ -42,12 +42,12 @@ def id(message):
             response_data = response.json()
             status = response_data['paymentStatus']
             if status == "SUCCESS":
-                bot.send_message(message.chat.id,"оплачено")
+                bot.send_message(message.chat.id,"Заказ оплачен.")
             else:
-                bot.send_message(message.chat.id,"не оплачено")
+                bot.send_message(message.chat.id,"Заказ не оплачен.\nПовторите запрос для обновления статуса")
         else:
            bot.send_message(message.chat.id,"Ошибка при выполнении запроса:", response.status_code)
-    if message.text.lower() == '123.578.000':
+    elif message.text.lower() == '123.578.000':
         url = "https://pay-test.raif.ru/api/sbp/v1/qr/AD7AE6A28D04438FAA9727E2644EB037/payment-info"
 
         headers = {
@@ -62,9 +62,9 @@ def id(message):
             response_data = response.json()
             status = response_data['paymentStatus']
             if status == "SUCCESS":
-                bot.send_message(message.chat.id, "оплачено")
+                bot.send_message(message.chat.id, "Заказ оплачен.")
             else:
-                bot.send_message(message.chat.id, "не оплачено")
+                bot.send_message(message.chat.id, "Заказ не оплачен.\nПовторите запрос для обновления статуса")
                 first_mess = f"</b>Желаете ли вы повторить запрос?"
                 markup = types.InlineKeyboardMarkup()
                 button_yes = types.InlineKeyboardButton(text='Обновить', callback_data='yes')
@@ -72,5 +72,7 @@ def id(message):
                 bot.send_message(message.chat.id, first_mess, parse_mode='html', reply_markup=markup)
         else:
             bot.send_message(message.chat.id, "Ошибка при выполнении запроса:", response.status_code)
+    else:
+        bot.send_message(message.chat.id, "Неверный формат ID или незарегистированный ID.")
 
 bot.infinity_polling()
