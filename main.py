@@ -65,9 +65,12 @@ def id(message):
                 bot.send_message(message.chat.id, "оплачено")
             else:
                 bot.send_message(message.chat.id, "не оплачено")
+                first_mess = f"</b>Желаете ли вы повторить запрос?"
+                markup = types.InlineKeyboardMarkup()
+                button_yes = types.InlineKeyboardButton(text='Обновить', callback_data='yes')
+                markup.add(button_yes)
+                bot.send_message(message.chat.id, first_mess, parse_mode='html', reply_markup=markup)
         else:
             bot.send_message(message.chat.id, "Ошибка при выполнении запроса:", response.status_code)
-
-
 
 bot.infinity_polling()
