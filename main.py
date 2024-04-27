@@ -20,7 +20,7 @@ def main(message):
 def response(function_call):
   if function_call.message:
      if function_call.data == "yes":
-        agreement = "Введите номер заказа 000.000.000"
+        agreement = "Введите номер заказа /mojo 000.000.000"
         markup = types.InlineKeyboardMarkup()
         bot.send_message(function_call.message.chat.id, agreement, reply_markup=markup)
         bot.answer_callback_query(function_call.id)
