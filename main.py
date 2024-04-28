@@ -110,7 +110,6 @@ def id(message):
                     bot.send_message(message.chat.id, "Заказ не оплачен.\nПовторите запрос для обновления статуса")
             else:
                 bot.send_message(message.chat.id, "Ошибка при выполнении запроса:", response.status_code)
-
     else:
         bot.send_message(message.chat.id, "Неверный формат ID или незарегистированный ID.")
 
