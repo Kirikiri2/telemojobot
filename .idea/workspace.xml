@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="398a9f24-8cde-4866-93ec-2e52a7fc19eb" name="Changes" comment="окончательно сделала проверку оплачено/не оплачено для зарег qr ночная версия 3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="398a9f24-8cde-4866-93ec-2e52a7fc19eb" name="Changes" comment=" утренняя версия1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +73,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.12" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -161,7 +157,31 @@
       <option name="project" value="LOCAL" />
       <updated>1714259954862</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="окончательно сделала проверку оплачено/не оплачено для зарег qr утренняя версия">
+      <option name="closed" value="true" />
+      <created>1714282986298</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714282986298</updated>
+    </task>
+    <task id="LOCAL-00008" summary="окончательно сделала проверку оплачено/не оплачено для зарег qr утренняя версия1">
+      <option name="closed" value="true" />
+      <created>1714283040619</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714283040619</updated>
+    </task>
+    <task id="LOCAL-00009" summary=" утренняя версия1">
+      <option name="closed" value="true" />
+      <created>1714283180651</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714283180651</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +192,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -185,7 +217,10 @@
     <MESSAGE value="окончательно сделала проверку оплачено/не оплачено для зарег qr" />
     <MESSAGE value="окончательно сделала проверку оплачено/не оплачено для зарег qr ночная версия 2" />
     <MESSAGE value="окончательно сделала проверку оплачено/не оплачено для зарег qr ночная версия 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="окончательно сделала проверку оплачено/не оплачено для зарег qr ночная версия 3" />
+    <MESSAGE value="окончательно сделала проверку оплачено/не оплачено для зарег qr утренняя версия" />
+    <MESSAGE value="окончательно сделала проверку оплачено/не оплачено для зарег qr утренняя версия1" />
+    <MESSAGE value=" утренняя версия1" />
+    <option name="LAST_COMMIT_MESSAGE" value=" утренняя версия1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/telemojobot$main.coverage" NAME="main Coverage Results" MODIFIED="1714281998829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
