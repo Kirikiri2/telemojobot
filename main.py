@@ -20,7 +20,7 @@ def main(message):
 def response(function_call):
   if function_call.message:
      if function_call.data == "yes":
-        agreement = "Введите номер заказа /mojo 000.000.000"
+        agreement = "Введите номер заказа в подобном формате: /mojo 000.000.000"
         markup = types.InlineKeyboardMarkup()
         bot.send_message(function_call.message.chat.id, agreement, reply_markup=markup)
         bot.answer_callback_query(function_call.id)
@@ -65,11 +65,11 @@ def id(message):
                 bot.send_message(message.chat.id, "Заказ оплачен.")
             else:
                 bot.send_message(message.chat.id, "Заказ не оплачен.\nПовторите запрос для обновления статуса")
-                first_mess = f"</b>Желаете ли вы повторить запрос?"
+                against_mess = f"</b>Желаете ли вы повторить запрос?"
                 markup = types.InlineKeyboardMarkup()
                 button_yes = types.InlineKeyboardButton(text='Обновить', callback_data='yes')
                 markup.add(button_yes)
-                bot.send_message(message.chat.id, first_mess, parse_mode='html', reply_markup=markup)
+                bot.send_message(message.chat.id, against_mess, parse_mode='html', reply_markup=markup)
         else:
             bot.send_message(message.chat.id, "Ошибка при выполнении запроса:", response.status_code)
     else:
