@@ -15,7 +15,6 @@ def main(message):
     markup.add(button_yes)
     bot.send_message(message.chat.id, first_mess, parse_mode='html', reply_markup=markup)
 
-
 @bot.callback_query_handler(func=lambda call:True)
 def response(function_call):
   if function_call.message:
